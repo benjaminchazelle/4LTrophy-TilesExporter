@@ -1,0 +1,22 @@
+TilesExporter est dédié au téléchargement de vastes zones sur OpenStreetMap.
+Il s'utilise avec TilesSelecter.
+Il prépare le téléchargement en ségmentant la séléction en zones (ensemble de plusieurs tuiles) pour faciliter le téléchargement
+
+Comment télécharger mes tuiles ?
+	1. Séléctionner mes tuiles sur TilesSelecter
+	2. Exporter ma séléction (bouton Export), puis la copier coller dans un fichier "selection.json"
+	3. Placer selection.json dans le même répértoire que predownloader.js 
+	4. Editer le niveau de zoom et le nombre de tuiles maximum par zones au début predownloader.js
+	5. Executer predownloader.js avec Node.js
+		5.1	Une erreur peut survenir si le niveau de zoom n'est pas en adéquation avec la séléction (problème de précision)
+			Mais ça devrait bien se passer ;)
+	6. Le predownloader devrait alors avoir générer un areas.json
+	7. Editer downloader.js, fixer le niveau de zoom (le même que précédement)
+	8. Lancer downloader.js avec Node.js
+	9. Mettre au four une pizza
+	10. Attendre la fin du téléchargement 
+	11. Manger votre pizza. J'espère pour la cuisson de votre pizza que vous compter pas télécharger des niveaux de zoom trop élevé x')
+	
+	
+	
+	Vous pouvez utiliser generate5.js pour télécharger les 5 premiers niveaux de zoom d'OSM de la carte mondiale (c'est rapide et léger)
